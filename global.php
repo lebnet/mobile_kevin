@@ -20,4 +20,15 @@
 		}
 	}
 
+	function etape( $a, $b ){
+		echo('
+		<div class="panel panel-primary">
+		  <div class="panel-heading">
+		    <h3 class="panel-title">'. $a .'</h3>
+		  </div>
+		  <div class="panel-body">
+		    '. $b .'
+		  </div>
+		</div>');
+	}
 ?>

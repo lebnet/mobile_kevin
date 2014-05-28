@@ -100,13 +100,11 @@
 					');
 
 
-					echo("PREREQUIS = Avant de partir n'oubliez pas : - de vérifier que vous disposez du mode international sur votre ligne en regardant dans votre espace client > mes options sinon vous n'aurez pas de réseau à l'étranger <br/>- d'initialiser le code secret de votre messagerie vocale (appel au 888, puis choix 2 et laissez vous guider).");
+					etape("PREREQUIS", "Avant de partir n'oubliez pas :<br/> - de vérifier que vous disposez du mode international sur votre ligne en regardant dans votre espace client > mes options sinon vous n'aurez pas de réseau à l'étranger <br/>- d'initialiser le code secret de votre messagerie vocale (appel au 888, puis choix 2 et laissez vous guider).");
 					
-					echo("EXPLICATION FONCTIONNEMENT ETRANGER = Ensuite, il faut savoir que pour toutes les personnes restées en France (votre famille / vos amis) qui envoient des SMS ou appellent un numéro français à l'étranger (vous), cela sera facturé comme d'habitude pour lui soit en général illimité pour les SMS voir les appels en fonction de leur forfait. Par contre sans option(s), la réception d'appels te sera facturée, la réception de SMS étant gratuite.");
+					etape("EXPLICATION FONCTIONNEMENT ETRANGER", "Ensuite, il faut savoir que pour toutes les personnes restées en France (votre famille / vos amis) qui envoient des SMS ou appellent un numéro français à l'étranger (vous), cela sera facturé comme d'habitude pour lui soit en général illimité pour les SMS voir les appels en fonction de leur forfait. Par contre sans option(s), la réception d'appels te sera facturée, la réception de SMS étant gratuite.");
 					
-					echo ( "{bold}En " . $_POST['pays'] . " : {bold}" );
-					
-					echo("EXPLICATIONS PRATIQUES = Pour appeler la France, je fais le + 33 6... (si j'appelle un n° commençant par 06 par exemple)
+					etape("EXPLICATIONS PRATIQUES <b>EN " . $_POST['pays'] . "</b>", "Pour appeler la France, je fais le + 33 6... (si j'appelle un n° commençant par 06 par exemple)
 						Pour appeler en "  . $_POST['pays'] .  ", je fais le +$indicatif... suivi du n° local
 						888 ou +33 6 08 08 08 08 la messagerie vocale
 						444 ou #123# (appel gratuit depuis l'étranger) informations, options et pass'
