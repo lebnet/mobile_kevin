@@ -121,7 +121,6 @@
 			?>
 			<div id="footer">
 				<p class="text-info">Ce site n'est en aucun cas lié avec la société Orange et la marque Sosh.</p>
-				<p class="text-info">ce site n'est en aucun cas lié avec la société Orange et la marque Sosh</p>
 				<p class="text-info">Nous n'assumons aucune responsabilité de quelque nature que ce soit relativement à l'intégrité, pertinence, exactitude, qualité, entièreté, utilité ou même valeur de quelque contenu, data, document, graphique, image, information, idée, conseil, ou opinion que ce soit pouvant être contenu sur ce site.
 				</p>
 				<p class="text-info">Toute marque de commerce, tout logo et toute marque de services identifiant les produits et les services (collectivement appelés «marques») utilisés dans ce site sont des marques déposées et non déposées et appartiennent à leurs propriétaires respectifs.
