@@ -44,51 +44,75 @@
 			<div class="jumbotron">
 				<h1>Tarifs pour un séjour à l'étranger avec Sosh</h1>
 			</div>
-			<form class="form-horizontal" method="POST">
-				<fieldset>
-					<!--FormName-->
-					<legend> Laissez vous guider...</legend>
+			<?php 
+				if( !isset($_POST['pays'])){
+					echo('<form class="form-horizontal" method="POST">
+							<fieldset>
+								<!--FormName-->
+								<legend> Laissez vous guider...</legend>
 
-					<!--SelectBasic-->
-					<div class="form-group">
-						<label class="col-md-4 control-label" for="pays">Indiquez le pays de votre séjour</label>
-						<div class="col-md-5">
-						<select id="pays" name="pays" class="form-control">
-							<option disabled selected>-- PAYS --</option>
-							<optgroup label="EU">
-							<?php listP($pays_EUROPE); ?>
-							<optgroup label="And_Suis">
-							<?php listP($pays_SA); ?>
-							<optgroup label="USA_Magreb">
-							<?php listP($pays_USA);	?>
-						</select>
-						</div>
-					</div>
+								<!--SelectBasic-->
+								<div class="form-group">
+									<label class="col-md-4 control-label" for="pays">Indiquez le pays de votre séjour</label>
+									<div class="col-md-5">
+									<select id="pays" name="pays" class="form-control">
+										<option disabled selected>-- PAYS --</option>
+										<optgroup label="EU">
+					');
+					listP($pays_EUROPE); 
+					echo('	<optgroup label="And_Suis">  ');
+					listP($pays_SA); 
+					echo('	<optgroup label="USA_Magreb">  ');
+					listP($pays_USA);
+					echo('
+									</select>
+									</div>
+								</div>
 
-					<!--SelectBasic-->
-					<div class="form-group">
-						<label class="col-md-4 control-label" for="select basic">Indiquez votre forfait SOSH</label>
-						<div class="col-md-5">
-						<select id="selectbasic" name="forf" class="form-control">
-							<option disabled selected>-- FORFAIT --</option>
-							<?php listF( $forfait ); ?>
-						</select>
-						</div>
-					</div>
+								<!--SelectBasic-->
+								<div class="form-group">
+									<label class="col-md-4 control-label" for="select basic">Indiquez votre forfait SOSH</label>
+									<div class="col-md-5">
+									<select id="selectbasic" name="forf" class="form-control">
+										<option disabled selected>-- FORFAIT --</option>
+										'); 
+					listF( $forfait );
+					echo('
+									</select>
+									</div>
+								</div>
 
-					<!--Button-->
-					<div class="form-group">
-						<label class="col-md-4 control-label" for="sub">Envoyer</label>
-						<div class="col-md-4">
-							<button id="sub" name="sub" class="btn btn-success">OK!</button>
-						</div>
-					</div>
-				</fieldset>
-			</form>
-			<div id="iframe" class="col-sm-12">
-				<iframe  src="http://travel.orange.fr/services_couverture.php?offre=10&destination_id=MAN&zone_code=1&ligne=dmgp" scrolling="no"></iframe>
-			</div>
+								<!--Button-->
+								<div class="form-group">
+									<label class="col-md-4 control-label" for="sub">Envoyer</label>
+									<div class="col-md-4">
+										<button id="sub" name="sub" class="btn btn-success">OK!</button>
+									</div>
+								</div>
+							</fieldset>
+						</form>
+					');
+				}
+				else{
+					echo('<div id="iframe" class="col-sm-12">
+							<iframe  src="http://travel.orange.fr/services_couverture.php?offre=10&destination_id=MAN&zone_code=1&ligne=dmgp" scrolling="no"></iframe>
+						  </div>
+					');
 
+
+					echo("PREREQUIS = Avant de partir n'oubliez pas : - de vérifier que vous disposez du mode international sur votre ligne en regardant dans votre espace client > mes options sinon vous n'aurez pas de réseau à l'étranger <br/>- d'initialiser le code secret de votre messagerie vocale (appel au 888, puis choix 2 et laissez vous guider).");
+					
+					echo("EXPLICATION FONCTIONNEMENT ETRANGER = Ensuite, il faut savoir que pour toutes les personnes restées en France (votre famille / vos amis) qui envoient des SMS ou appellent un numéro français à l'étranger (vous), cela sera facturé comme d'habitude pour lui soit en général illimité pour les SMS voir les appels en fonction de leur forfait. Par contre sans option(s), la réception d'appels te sera facturée, la réception de SMS étant gratuite.");
+					
+					echo ( "{bold}En " . $_POST['pays'] . " : {bold}" );
+					
+					echo("EXPLICATIONS PRATIQUES = Pour appeler la France, je fais le + 33 6... (si j'appelle un n° commençant par 06 par exemple)
+						Pour appeler en "  . $_POST['pays'] .  ", je fais le +$indicatif... suivi du n° local
+						888 ou +33 6 08 08 08 08 la messagerie vocale
+						444 ou #123# (appel gratuit depuis l'étranger) informations, options et pass'
+					");
+				}
+			?>
 			<div id="footer">
 				<p class="text-info">ce site n'est en aucun cas lié avec la société Orange et la marque Sosh</p>
 				<p class="text-info">Nous n'assumons aucune responsabilité de quelque nature que ce soit relativement à l'intégrité, pertinence, exactitude, qualité, entièreté, utilité ou même valeur de quelque contenu, data, document, graphique, image, information, idée, conseil, ou opinion que ce soit pouvant être contenu sur ce site.
