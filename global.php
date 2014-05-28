@@ -20,15 +20,22 @@
 		}
 	}
 
+	$GLOBALS['i'] = 0;
 	function etape( $a, $b ){
+		$GLOBALS['i'] +=1;
 		echo('
-		<div class="panel panel-primary">
-		  <div class="panel-heading">
-		    <h3 class="panel-title text-center">'. $a .'</h3>
-		  </div>
-		  <div class="panel-body text-center">
-		    '. $b .'
-		  </div>
-		</div>');
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a class="panel-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapse'. $GLOBALS['i'] .'">' . $a . '</a>
+					</h4>
+				</div>
+				<div id="collapse'. $GLOBALS['i'] .'" class="panel-body collapse">
+					<div class="panel-inner" style="text-align: justify;">
+						'. $b .'
+					</div>
+				</div>
+			</div>
+		');
 	}
 ?>
