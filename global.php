@@ -5,4 +5,19 @@
 
 	$pays_SA=array('ANDORRE','SUISSE');
 	$pays_USA=array('ALGERIE','CANADA','ETATS-UNIS','HAWAII','MAROC','TUNISIE','TURQUIE',);
+
+	function listP($A){
+		foreach($A as $key){
+			echo('<option>'.$key.'</option>');
+		}
+	}
+
+	$forfait = array( '4,99', '9,99', '14,99', '19,99', '24,99', '+ livebox 29,99', '+ livebox 34,99', '+ livebox 44,99', '+ livebox 49,99' );
+
+	function listF( $A ){
+		foreach ($A as $key ) {
+			echo('<option> - Forfait sosh à ' . $key . '</option>');
+		}
+	}
+
 ?>

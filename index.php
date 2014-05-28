@@ -1,11 +1,4 @@
-<?php
-	require('global.php');
-	function listP($A){
-		foreach($A as $key){
-			echo('<option>'.$key.'</option>');
-		}
-	}
-?>
+<?php 	require('global.php'); 	?>
 <!DOCTYPEHTML>
 <html lang="fr">
 	<head>
@@ -61,11 +54,13 @@
 						<label class="col-md-4 control-label" for="pays">Indiquez le pays de votre séjour</label>
 						<div class="col-md-5">
 						<select id="pays" name="pays" class="form-control">
-							<?php
-								listP($pays_EUROPE);
-								listP($pays_SA);
-								listP($pays_USA);
-							?>
+							<option disabled selected>-- PAYS --</option>
+							<optgroup label="EU">
+							<?php listP($pays_EUROPE); ?>
+							<optgroup label="And_Suis">
+							<?php listP($pays_SA); ?>
+							<optgroup label="USA_Magreb">
+							<?php listP($pays_USA);	?>
 						</select>
 						</div>
 					</div>
@@ -75,8 +70,8 @@
 						<label class="col-md-4 control-label" for="select basic">Indiquez votre forfait SOSH</label>
 						<div class="col-md-5">
 						<select id="selectbasic" name="forf" class="form-control">
-							<option value="1">Optionone</option>
-							<option value="2">Optiontwo</option>
+							<option disabled selected>-- FORFAIT --</option>
+							<?php listF( $forfait ); ?>
 						</select>
 						</div>
 					</div>
