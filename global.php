@@ -1,6 +1,6 @@
 <?php
 	$pays_EUROPE=array(
-		'ACORES(LES)',	'ALAND(LESILES)','ALLEMAGNE','AUTRICHE', 'BALEARES(LES)', 'BELGIQUE', 'BULGARIE', 'CANARIES(ILES)',	'CHYPRE', 'CORFOU(ILE)',	'CRETE', 'CROATIE',	'CYCLADES(LES)','DANEMARKDESIRADE(ILEDELA)','ESPAGNE','ESTONIE', 'FEROE(ILES)',	'FINLANDE','FRANCE','GIBRALTAR','GRECE','GUADELOUPE(ILEDELA)','GUERNESEY','GUYANEFRANÇAISE', 'HONGRIE','IRLANDE','ISLANDE','ITALIE','JERSEY','LETTONIE','LIECHTENSTEIN','LITUANIE',
+		'ACORES(LES)',	'ALAND(LESILES)','ALLEMAGNE','AUTRICHE', 'BALEARES(LES)', 'BELGIQUE', 'BULGARIE', 'CANARIES(ILES)',	'CHYPRE', 'CORFOU(ILE)','CRETE', 'CROATIE',	'CYCLADES(LES)','DANEMARK','DESIRADE(ILEDELA)','ESPAGNE','ESTONIE', 'FEROE(ILES)',	'FINLANDE','FRANCE','GIBRALTAR','GRECE','GUADELOUPE(ILEDELA)','GUERNESEY','GUYANEFRANÇAISE', 'HONGRIE','IRLANDE','ISLANDE','ITALIE','JERSEY','LETTONIE','LIECHTENSTEIN','LITUANIE',
 		'LUXEMBOURG','MADERE','MALTE(ILEDE)','MAN(ILEDE)','MARIE-GALANTE(ILE)','MARTINIQUE','MAYOTTE','NORVEGE','PAYS-BAS','POLOGNE','PORTUGAL','REP.TCHEQUE','REUNION','RHODES(ILE)','ROUMANIE','ROYAUME-UNI','SAINTPIERREETMIQUELON','SAINT-BARTHELEMY','SAINT-MARTIN(ILE)','SAINTES(ILES)','SANMARIN','SARDAIGNE','SICILE','SLOVAQUIES','LOVENIE','SUEDE','VATICAN');
 
 	$pays_SA=array('ANDORRE','SUISSE');
@@ -16,7 +16,7 @@
 
 	function listF( $A ){
 		foreach ($A as $key ) {
-			echo('<option> - Forfait sosh à ' . $key . '</option>');
+			echo('<option> - Forfait sosh à ' . $key . ' €</option>');
 		}
 	}
 
@@ -24,9 +24,9 @@
 		echo('
 		<div class="panel panel-primary">
 		  <div class="panel-heading">
-		    <h3 class="panel-title">'. $a .'</h3>
+		    <h3 class="panel-title text-center">'. $a .'</h3>
 		  </div>
-		  <div class="panel-body">
+		  <div class="panel-body text-center">
 		    '. $b .'
 		  </div>
 		</div>');

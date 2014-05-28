@@ -23,6 +23,9 @@
 		<!--[ifIE]><link rel="shortcuticon"type="image/x-icon"href="img/fav.jpg"/><![endif]-->		
 
 		<style>
+			h1{
+				text-align: center;
+			}
 			iframe{
 				height: 1200px;
 				left: -220px;
@@ -112,6 +115,7 @@
 				}
 			?>
 			<div id="footer">
+				<p class="text-info">Ce site n'est en aucun cas lié avec la société Orange et la marque Sosh.</p>
 				<p class="text-info">ce site n'est en aucun cas lié avec la société Orange et la marque Sosh</p>
 				<p class="text-info">Nous n'assumons aucune responsabilité de quelque nature que ce soit relativement à l'intégrité, pertinence, exactitude, qualité, entièreté, utilité ou même valeur de quelque contenu, data, document, graphique, image, information, idée, conseil, ou opinion que ce soit pouvant être contenu sur ce site.
 				</p>
