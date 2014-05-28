@@ -1,16 +1,10 @@
 <?php
+	require('global.php');
 	function listP($A){
 		foreach($A as $key){
 			echo('<option>'.$key.'</option>');
 		}
 	}
-
-	$pays_EUROPE=array(
-		'ACORES(LES)',	'ALAND(LESILES)','ALLEMAGNE','AUTRICHE', 'BALEARES(LES)', 'BELGIQUE', 'BULGARIE', 'CANARIES(ILES)',	'CHYPRE', 'CORFOU(ILE)',	'CRETE', 'CROATIE',	'CYCLADES(LES)','DANEMARKDESIRADE(ILEDELA)','ESPAGNE','ESTONIE', 'FEROE(ILES)',	'FINLANDE','FRANCE','GIBRALTAR','GRECE','GUADELOUPE(ILEDELA)','GUERNESEY','GUYANEFRANÇAISE', 'HONGRIE','IRLANDE','ISLANDE','ITALIE','JERSEY','LETTONIE','LIECHTENSTEIN','LITUANIE',
-'LUXEMBOURG','MADERE','MALTE(ILEDE)','MAN(ILEDE)','MARIE-GALANTE(ILE)','MARTINIQUE','MAYOTTE','NORVEGE','PAYS-BAS','POLOGNE','PORTUGAL','REP.TCHEQUE','REUNION','RHODES(ILE)','ROUMANIE','ROYAUME-UNI','SAINTPIERREETMIQUELON','SAINT-BARTHELEMY','SAINT-MARTIN(ILE)','SAINTES(ILES)','SANMARIN','SARDAIGNE','SICILE','SLOVAQUIES','LOVENIE','SUEDE','VATICAN');
-
-	$pays_SA=array('ANDORRE','SUISSE');
-	$pays_USA=array('ALGERIE','CANADA','ETATS-UNIS','HAWAII','MAROC','TUNISIE','TURQUIE',);
 ?>
 <!DOCTYPEHTML>
 <html lang="fr">
@@ -36,20 +30,27 @@
 		<!--[ifIE]><link rel="shortcuticon"type="image/x-icon"href="img/fav.jpg"/><![endif]-->		
 
 		<style>
-			#logo{
-				position: fixed;
-				top:	0;
-				left:	0;
-				width:	10%;
+			iframe{
+				height: 1200px;
+				left: -220px;
+				position: absolute;
+				top: -332px;
+				width: 1080px;
+			}
+			#iframe{
+				height: 205px;
+				overflow: hidden;
+				position: relative;
+				width: 650px;
 			}
 		</style>
 	</head>
 	<body>
-		<div class="container col-lg-8 col-lg-offset-2">
+		<img class="col-sm-1 " id="logo" src="http://t1.ftcdn.net/jpg/00/32/17/34/400_F_32173424_mEsqnM0aIso6Qs86HJc1OkeEvZn5GnAt.jpg"/>
+		<div class="container col-lg-8 col-lg-offset-1">
 			<div class="jumbotron">
 				<h1>Tarifs pour un séjour à l'étranger avec Sosh</h1>
 			</div>
-			<img id="logo" src="http://t1.ftcdn.net/jpg/00/32/17/34/400_F_32173424_mEsqnM0aIso6Qs86HJc1OkeEvZn5GnAt.jpg"/>
 			<form class="form-horizontal" method="POST">
 				<fieldset>
 					<!--FormName-->
@@ -89,6 +90,10 @@
 					</div>
 				</fieldset>
 			</form>
+			<div id="iframe" class="col-sm-12">
+				<iframe  src="http://travel.orange.fr/services_couverture.php?offre=10&destination_id=MAN&zone_code=1&ligne=dmgp" scrolling="no"></iframe>
+			</div>
+
 			<div id="footer">
 				<p class="text-info">ce site n'est en aucun cas lié avec la société Orange et la marque Sosh</p>
 				<p class="text-info">Nous n'assumons aucune responsabilité de quelque nature que ce soit relativement à l'intégrité, pertinence, exactitude, qualité, entièreté, utilité ou même valeur de quelque contenu, data, document, graphique, image, information, idée, conseil, ou opinion que ce soit pouvant être contenu sur ce site.
