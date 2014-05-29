@@ -38,22 +38,4 @@
 			</div>
 		');
 	}
-
-	$GLOBALS['j'] = 0;
-	function SSetape( $a, $b ){
-
-		echo('<div class="panel panel-default">
-					<div class="panel-heading">
-						<h4 class="panel-title">
-							<a class="panel-toggle" data-toggle="collapse" data-parent="#accordion3" href="#collapse'. $GLOBALS['j'] .'">' . $a . '</a>	
-						</h4>
-					</div>
-					<div id="collapse'. $GLOBALS['j'] .'" class="panel-body collapse">
-						<div class="panel-inner" style="text-align: justify;">
-							'. $b .'
-						</div>
-					</div>
-				</div>
-		');
-	}
 ?>

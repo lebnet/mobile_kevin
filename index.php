@@ -1,46 +1,32 @@
 <?php 	require('global.php'); 	?>
 <!DOCTYPEHTML>
 <html lang="fr">
-	<head>
-		<meta charset="utf_8">
-		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
-		<meta name="viewport"content="width=device-width;initial-scale=1.0;user-scalable=no">
-		<meta name="description"content=""/>
-		<meta name="author"CONTENT="Auteur:Rémicollignon;"/>
-		<meta name="copyright"content="©rcdinfo.fr"/>
-		<meta name="revisit"content="1days"/>
-
-		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-		<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-
-		<link rel="stylesheet"href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
-		<link rel="stylesheet"href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css">
-
-		<title>SELECT</title>
-
-		<link rel="icon" type="image/png" href="img/fav.jpg"/>
-		<!--[ifIE]><link rel="shortcuticon"type="image/x-icon"href="img/fav.jpg"/><![endif]-->		
+	<?php require 'inc/head.php'; ?>
 
 		<style>
 			h1{
 				text-align: center;
 			}
-			iframe{
-				height: 1200px;
+			#iframeA{
+				height: 105px;
+				overflow: hidden;
+				position: relative;
+				width: 650px;
+			}
+			#iframA iframe{
+				height: 1900px;
 				left: -220px;
 				position: absolute;
-				top: -332px;
+				top: -220px;
 				width: 1080px;
 			}
-			#iframe{
-				height: 205px;
+			#iframeB{
+				height: 1005px;
 				overflow: hidden;
 				position: relative;
 				width: 650px;
 			}
 		</style>
-	</head>
 	<body>
 		<img class="col-sm-1 " id="logo" src="http://t1.ftcdn.net/jpg/00/32/17/34/400_F_32173424_mEsqnM0aIso6Qs86HJc1OkeEvZn5GnAt.jpg"/>
 		<div class="container col-lg-8 col-lg-offset-1">
@@ -123,9 +109,9 @@
 
 					echo ("<h3><b> EN " . $_POST['pays'] . ":</b></h3>");
 					
-					etape("EXPLICATIONS PRATIQUES" , "Pour appeler la France, je fais le + 33 6... (si j'appelle un n° commençant par 06 par exemple)  
-														Pour appeler en " . $_POST['pays'] . ", je fais le +indicatif... suivi du n° local  
-														888 ou +33 6 08 08 08 08 la messagerie vocale  
+					etape("EXPLICATIONS PRATIQUES" , "Pour appeler la France, je fais le + 33 6... (si j'appelle un n° commençant par 06 par exemple)<br/>
+														Pour appeler en " . $_POST['pays'] . ", je fais le +indicatif... suivi du n° local<br/>
+														888 ou +33 6 08 08 08 08 la messagerie vocale<br/>
 														444 ou #123# (appel gratuit depuis l'étranger) informations, options et pass."
 														.'<div class="panel-body">
 															<div class="panel-group">
@@ -138,7 +124,7 @@
 																	<div id="collapse6" class="panel-body collapse">
 																		<div class="panel-inner" style="text-align: justify;">
 																			iframe détourée comme celle-ci
-																				<div id="iframe" class="col-sm-12">
+																				<div id="iframeA" class="col-sm-12">
 																					<iframe  src="http://travel.orange.fr/services_couverture.php?offre=10&destination_id=MAN&zone_code=1&ligne=dmgp" scrolling="no"></iframe>
 						  														</div>
 																		</div>
@@ -153,18 +139,21 @@
 																	</div>
 																	<div id="collapse7" class="panel-body collapse">
 																		<div class="panel-inner" style="text-align: justify;">'
-																			."La 4G vous accompagne dans plusieurs pays avec les partenaires d'Orange ! 
+																			."<p>La 4G vous accompagne dans plusieurs pays avec les partenaires d'Orange ! 
 																			Les clients 4G d'Orange France ainsi que Sosh bénéficient d'ores et déjà de l'accès à la 4G en Espagne, 
 																			au Portugal, au Royaume Uni, en Belgique, aux Pays Bas, au Luxembourg, en Suisse, en Italie, au 
-																			Canada et en Corée du Sud. Bientôt, ils pourront également bénéficier de l'accès à la 4G en Allemagne. 
-																			Le tarif pour utiliser la 4G à l'étranger est le même que celui de la 3G. 
+																			Canada et en Corée du Sud. Bientôt, ils pourront également bénéficier de l'accès à la 4G en Allemagne.
+																			</p>
+																			<p>Le tarif pour utiliser la 4G à l'étranger est le même que celui de la 3G. 
 																			Profiter du très haut débit mobile à l'étranger nécessite les mêmes conditions qu'en France 
 																			  métropolitaine : il vous suffit d'avoir un terminal compatible, d'avoir une offre 4G/H+ et d'être sous c
-																			  ouverture 4G. 
-																			La 4G à l'étranger est disponible selon l'offre souscrite, la disponibilité d'un accord de roaming 4G 
+																			  ouverture 4G.
+																			</p>
+																			<p>La 4G à l'étranger est disponible selon l'offre souscrite, la disponibilité d'un accord de roaming 4G 
 																			  entre Orange SA et un opérateur partenaire, le support par le terminal du client des bandes de 
 																			  fréquences LTE opérées par l'opérateur partenaire et la disponibilité de la couverture 4G de  
-																			  l'opérateur partenaire.".'
+																			  l'opérateur partenaire.
+																			</p>".'
 																		</div>
 																	</div>
 																</div>
@@ -177,9 +166,8 @@
 																	</div>
 																	<div id="collapse8" class="panel-body collapse">
 																		<div class="panel-inner" style="text-align: justify;">
-																			iframe (statique la par contre) détourée comme celle ci 
-																				<div id="iframe" class="col-sm-12">
-																					<iframe  src="http://travel.orange.fr/services_compatibilite.php?offre=10&destination_id=DE&zone_code=1&ligne=dmgp&" scrolling="no"></iframe>
+																				<div id="iframeB" class="col-sm-12">
+																					<iframe src="http://travel.orange.fr/services_compatibilite.php?offre=10&destination_id=DE&zone_code=1&ligne=dmgp&" scrolling="no"></iframe>
 																				</div>
 																		</div>
 																	</div>
@@ -194,12 +182,8 @@
 				}
 			?>
 			<div id="footer">
+				<a href="ment.php">Mentions légales</a>
 				<p class="text-info">Ce site n'est en aucun cas lié avec la société Orange et la marque Sosh.</p>
-				<p class="text-info">Nous n'assumons aucune responsabilité de quelque nature que ce soit relativement à l'intégrité, pertinence, exactitude, qualité, entièreté, utilité ou même valeur de quelque contenu, data, document, graphique, image, information, idée, conseil, ou opinion que ce soit pouvant être contenu sur ce site.
-				</p>
-				<p class="text-info">Toute marque de commerce, tout logo et toute marque de services identifiant les produits et les services (collectivement appelés «marques») utilisés dans ce site sont des marques déposées et non déposées et appartiennent à leurs propriétaires respectifs.
-				Aucun élément contenu dans ce site ne peut être interprété comme octroyé, c'est à dire que les « estoppels » ou autrement dit les licences ou droits d'usage de la marque, cités dans ce site ne peuvent être utilisés sans l'autorisation écrite du propriétaire des marques de fabrique parues dans ce site.		
-				</p>
 			</div>
 		</div>
 	</body>
