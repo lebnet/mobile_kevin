@@ -190,7 +190,7 @@
 			<div id="footer">
 				<p class="text-info">Ce site n'est en aucun cas lié avec la société Orange et la marque Sosh.</p>
 				<div class="row">
-					<a href="ment.php"	class="btn btn-lg btn-info col-sm-4 col-sm-offset-4" target="_BLANK" ><span class="glyphicon glyphicon-info-sign"></span>Mentions légales</a>
+					<a href="ment.php"	class="btn btn-lg btn-info col-sm-4 col-sm-offset-4" target="_BLANK" ><span class="glyphicon glyphicon-info-sign"></span> Mentions légales</a>
 				</div>
 				<div class="row">
 					<a href="http://boutique.orange.fr/doc/contrat3392.pdf" class="btn btn-lg btn-info col-sm-6 col-sm-offset-3" target="_BLANK" ><span class="glyphicon glyphicon-info-sign"></span> Fiche tarifaire des offres sosh</a>
