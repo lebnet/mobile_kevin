@@ -29,10 +29,9 @@
 			}
 		</style>
 	<body>
-		<img class="col-sm-1 " id="logo" src="http://t1.ftcdn.net/jpg/00/32/17/34/400_F_32173424_mEsqnM0aIso6Qs86HJc1OkeEvZn5GnAt.jpg"/>
-		<div class="container col-lg-8 col-lg-offset-1">
+		<div class="container col-lg-8 col-lg-offset-2">
 			<div class="jumbotron">
-				<h1>“SoshTravel”</h1>
+				<h1>SoshTravel</h1>
 			</div>
 			<?php 
 				if( !isset($_POST['pays'])){
@@ -92,9 +91,7 @@
 
 					echo('<div class="panel-body">
 							<div class="panel-group">
-							<h2>“Tarifs pour un séjour à l\'étranger avec Sosh”</h2>
-							<a href="index.php" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-chevron-left"></span> Retour</a>
-							<p></p>
+							<h2>Tarifs pour un séjour à l\'étranger avec Sosh</h2>
 					');
 
 
@@ -187,15 +184,16 @@
 					etape('TARIFS PAR DEFAUT', 'a faire plus tard');
 
 					echo('</div></div>');
+					echo '<a href="index.php" class="btn btn-sm btn-primary"><span class="glyphicon glyphicon-chevron-left"></span> Retour</a>';
 				}
 			?>
 			<div id="footer">
 				<p class="text-info">Ce site n'est en aucun cas lié avec la société Orange et la marque Sosh.</p>
 				<div class="row">
-					<a href="ment.php"	class="btn btn-lg btn-info col-sm-2 col-sm-offset-5" target="_BLANK" ><span class="glyphicon glyphicon-info-sign"></span>Mentions légales</a>
+					<a href="ment.php"	class="btn btn-lg btn-info col-sm-4 col-sm-offset-4" target="_BLANK" ><span class="glyphicon glyphicon-info-sign"></span>Mentions légales</a>
 				</div>
 				<div class="row">
-					<a href="http://boutique.orange.fr/doc/contrat3392.pdf" class="btn btn-lg btn-info col-sm-4 col-sm-offset-4" target="_BLANK" ><span class="glyphicon glyphicon-info-sign"></span> Fiche tarifaire des offres sosh</a>
+					<a href="http://boutique.orange.fr/doc/contrat3392.pdf" class="btn btn-lg btn-info col-sm-6 col-sm-offset-3" target="_BLANK" ><span class="glyphicon glyphicon-info-sign"></span> Fiche tarifaire des offres sosh</a>
 				</div>
 			</div>
 		</div>
