@@ -6,6 +6,7 @@
 		<style>
 			h1{
 				text-align: center;
+				font-size: 2.1em !important;
 			}
 			#iframeA{
 				height: 105px;
@@ -31,10 +32,11 @@
 		<img class="col-sm-1 " id="logo" src="http://t1.ftcdn.net/jpg/00/32/17/34/400_F_32173424_mEsqnM0aIso6Qs86HJc1OkeEvZn5GnAt.jpg"/>
 		<div class="container col-lg-8 col-lg-offset-1">
 			<div class="jumbotron">
-				<h1>Tarifs pour un séjour à l'étranger avec Sosh</h1>
+				<h1>“SoshTravel”</h1>
 			</div>
 			<?php 
 				if( !isset($_POST['pays'])){
+
 					echo('<form class="form-horizontal" method="POST">
 							<fieldset>
 								<!--FormName-->
@@ -46,13 +48,15 @@
 									<div class="col-md-5">
 									<select id="pays" name="pays" class="form-control">
 										<option disabled selected>-- PAYS --</option>
-										<optgroup label="EU">
+										<optgroup label="Europe et DOM">
 					');
 					listP($pays_EUROPE); 
-					echo('	<optgroup label="And_Suis">  ');
+					echo('	<optgroup label="Andorre et Suisse">  ');
 					listP($pays_SA); 
-					echo('	<optgroup label="USA_Magreb">  ');
+					echo('	<optgroup label="USA ET">  ');
 					listP($pays_USA);
+					echo('	<optgroup label="RESTE DU MONDE">	<option value="Reste du monde">Reste du monde</option>  ');
+					
 					echo('
 									</select>
 									</div>
@@ -75,7 +79,7 @@
 								<div class="form-group">
 									<label class="col-md-4 control-label" for="sub">Envoyer</label>
 									<div class="col-md-4">
-										<button id="sub" name="sub" class="btn btn-success">OK!</button>
+										<button id="sub" name="sub" class="btn btn-success">Valider</button>
 									</div>
 								</div>
 							</fieldset>
@@ -87,7 +91,11 @@
 					');
 
 					echo('<div class="panel-body">
-							<div class="panel-group">');
+							<div class="panel-group">
+							<h2>“Tarifs pour un séjour à l\'étranger avec Sosh”</h2>
+							<a href="index.php" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-chevron-left"></span> Retour</a>
+							<p></p>
+					');
 
 
 					etape("PREREQUIS", "<h5>Avant de partir n'oubliez pas :</h5>  
@@ -182,8 +190,13 @@
 				}
 			?>
 			<div id="footer">
-				<a href="ment.php">Mentions légales</a>
 				<p class="text-info">Ce site n'est en aucun cas lié avec la société Orange et la marque Sosh.</p>
+				<div class="row">
+					<a href="ment.php"	class="btn btn-lg btn-info col-sm-2 col-sm-offset-5" target="_BLANK" ><span class="glyphicon glyphicon-info-sign"></span>Mentions légales</a>
+				</div>
+				<div class="row">
+					<a href="http://boutique.orange.fr/doc/contrat3392.pdf" class="btn btn-lg btn-info col-sm-4 col-sm-offset-4" target="_BLANK" ><span class="glyphicon glyphicon-info-sign"></span> Fiche tarifaire des offres sosh</a>
+				</div>
 			</div>
 		</div>
 	</body>

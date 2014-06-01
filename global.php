@@ -1,14 +1,14 @@
 <?php
-	$pays_EUROPE=array(
-		'ACORES(LES)',	'ALAND(LESILES)','ALLEMAGNE','AUTRICHE', 'BALEARES(LES)', 'BELGIQUE', 'BULGARIE', 'CANARIES(ILES)',	'CHYPRE', 'CORFOU(ILE)','CRETE', 'CROATIE',	'CYCLADES(LES)','DANEMARK','DESIRADE(ILEDELA)','ESPAGNE','ESTONIE', 'FEROE(ILES)',	'FINLANDE','FRANCE','GIBRALTAR','GRECE','GUADELOUPE(ILEDELA)','GUERNESEY','GUYANEFRANÇAISE', 'HONGRIE','IRLANDE','ISLANDE','ITALIE','JERSEY','LETTONIE','LIECHTENSTEIN','LITUANIE',
-		'LUXEMBOURG','MADERE','MALTE(ILEDE)','MAN(ILEDE)','MARIE-GALANTE(ILE)','MARTINIQUE','MAYOTTE','NORVEGE','PAYS-BAS','POLOGNE','PORTUGAL','REP.TCHEQUE','REUNION','RHODES(ILE)','ROUMANIE','ROYAUME-UNI','SAINTPIERREETMIQUELON','SAINT-BARTHELEMY','SAINT-MARTIN(ILE)','SAINTES(ILES)','SANMARIN','SARDAIGNE','SICILE','SLOVAQUIES','LOVENIE','SUEDE','VATICAN');
+	$pays_EUROPE	=	array(
+		'acores (les)',	'aland (lesiles)','allemagne','autriche', 'baleares (les)', 'belgique', 'bulgarie', 'canaries (iles)',	'chypre', 'corfou (ile)','crete', 'croatie',	'cyclades (les)','danemark','desirade (iledela)','espagne','estonie', 'feroe (iles)',	'finlande','france','gibraltar','grece','guadeloupe (ile de la)','guernesey','guyanefrançaise', 'hongrie','irlande','islande','italie','jersey','lettonie','liechtenstein','lituanie',
+		'luxembourg','madere','malte (ilede)','man (ilede)','marie-galante (ile)','martinique','mayotte','norvege','pays-bas','pologne','portugal','rep.tcheque','reunion','rhodes (ile)','roumanie','royaume-uni','saintpierreetmiquelon','saint-barthelemy','saint-martin (ile)','saintes (iles)','sanmarin','sardaigne','sicile','slovaquies','lovenie','suede','vatican');
 
-	$pays_SA=array('ANDORRE','SUISSE');
-	$pays_USA=array('ALGERIE','CANADA','ETATS-UNIS','HAWAII','MAROC','TUNISIE','TURQUIE',);
+	$pays_SA 		=	array('andorre','suisse');
+	$pays_USA		=	array('algerie','canada','etats-unis','hawaii','maroc','tunisie','turquie',);
 
 	function listP($A){
 		foreach($A as $key){
-			echo('<option>'.$key.'</option>');
+			echo('<option>' . ucfirst($key) . '</option>');
 		}
 	}
 
@@ -16,7 +16,7 @@
 
 	function listF( $A ){
 		foreach ($A as $key ) {
-			echo('<option> - Forfait sosh à ' . $key . ' €</option>');
+			echo('<option> Forfait Sosh à ' . ucfirst($key) . ' €</option>');
 		}
 	}
 
