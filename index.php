@@ -49,12 +49,12 @@
 										<option disabled selected>-- PAYS --</option>
 										<optgroup label="Europe et DOM">
 					');
-					listP($pays_EUROPE); 
-					echo('	<optgroup label="Andorre et Suisse">  ');
+					listP($Pays); 
+					/*echo('	<optgroup label="Andorre et Suisse">  ');
 					listP($pays_SA); 
 					echo('	<optgroup label="USA ET">  ');
 					listP($pays_USA);
-					echo('	<optgroup label="RESTE DU MONDE">	<option value="Reste du monde">Reste du monde</option>  ');
+					echo('	<optgroup label="RESTE DU MONDE">	<option value="Reste du monde">Reste du monde</option>  ');*/
 					
 					echo('
 									</select>
@@ -86,8 +86,15 @@
 					');
 				}
 				else{
-					echo('
-					');
+						//print_r($Pays);
+						foreach ($Pays as $k => $v) {
+							//echo $v->nom . '<br>';
+							//echo $_POST['pays'] . '<br>';
+							if(	$v->nom == $_POST['pays'] ) {
+								$indicatif = $v->ind;
+							}
+						}
+					echo('	');
 
 					echo('<div class="panel-body">
 							<div class="panel-group">
@@ -115,7 +122,7 @@
 					echo ("<h3><b> EN " . $_POST['pays'] . ":</b></h3>");
 					
 					etape("EXPLICATIONS PRATIQUES" , "Pour appeler la France, je fais le + 33 6... (si j'appelle un n° commençant par 06 par exemple)<br/>
-														Pour appeler en " . $_POST['pays'] . ", je fais le +indicatif... suivi du n° local<br/>
+														Pour appeler en <b>" . $_POST['pays'] . "</b>, je fais le <b>".	$indicatif	."</b>... suivi du n° local<br/>
 														888 ou +33 6 08 08 08 08 la messagerie vocale<br/>
 														444 ou #123# (appel gratuit depuis l'étranger) informations, options et pass."
 														.'<div class="panel-body">

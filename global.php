@@ -1,14 +1,40 @@
 <?php
-	$pays_EUROPE	=	array(
+	class pays {
+		var $nom;
+		var $ind;
+
+		function pays ($a, $b){
+			$this->nom = $a;
+			$this->ind = $b;
+		}
+	}
+	$Pays = array();
+
+	$fp = fopen("Pays","r"); //lecture
+	while(!feof($fp)) {
+		
+		$Ligne = fgets($fp,255);
+		if( !( $Ligne[0] == '/' ) ){
+			$E = explode( "|" , $Ligne);
+			array_push($Pays, new pays( rtrim($E[0]) , $E[1] ) );
+		}
+	}
+	fclose($fp);
+
+	//print_r($Pays);
+
+	/*$pays_EUROPE	=	array(
 		'acores (les)',	'aland (lesiles)','allemagne','autriche', 'baleares (les)', 'belgique', 'bulgarie', 'canaries (iles)',	'chypre', 'corfou (ile)','crete', 'croatie',	'cyclades (les)','danemark','desirade (iledela)','espagne','estonie', 'feroe (iles)',	'finlande','france','gibraltar','grece','guadeloupe (ile de la)','guernesey','guyanefrançaise', 'hongrie','irlande','islande','italie','jersey','lettonie','liechtenstein','lituanie',
 		'luxembourg','madere','malte (ilede)','man (ilede)','marie-galante (ile)','martinique','mayotte','norvege','pays-bas','pologne','portugal','rep.tcheque','reunion','rhodes (ile)','roumanie','royaume-uni','saintpierreetmiquelon','saint-barthelemy','saint-martin (ile)','saintes (iles)','sanmarin','sardaigne','sicile','slovaquies','lovenie','suede','vatican');
-
 	$pays_SA 		=	array('andorre','suisse');
-	$pays_USA		=	array('algerie','canada','etats-unis','hawaii','maroc','tunisie','turquie',);
+	$pays_USA		=	array('algerie','canada','etats-unis','hawaii','maroc','tunisie','turquie',);*/
 
 	function listP($A){
-		foreach($A as $key){
+		/*foreach($A as $key){
 			echo('<option>' . ucfirst($key) . '</option>');
+		}*/
+		foreach ($A as $i => $val) {
+			echo('<option>' . $val->nom . '</option>');
 		}
 	}
 
@@ -38,4 +64,5 @@
 			</div>
 		');
 	}
+
 ?>
